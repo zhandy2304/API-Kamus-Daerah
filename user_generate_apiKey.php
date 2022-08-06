@@ -16,7 +16,7 @@ $dbname = "api_kamus_daerah";
 
 $conn = new mysqli($servername, $uname, $password, $dbname);
 
-// Membuat query
+// Membuat query untuk megenerate keytoken didatabase
 $sql = "UPDATE user SET key_token='".$token."' WHERE username='".$username."'";
 echo $sql;
 
