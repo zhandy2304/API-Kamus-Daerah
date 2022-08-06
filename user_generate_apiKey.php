@@ -26,8 +26,8 @@ $result=$conn->query($sql);
 if(! $result ) {
     die('Could not update data: ' . mysql_error());
  }
- echo "Updated data successfully\n";
 
+echo "Updated data successfully\n";
 
 header("Location: user_profile_apiKey.php");
 

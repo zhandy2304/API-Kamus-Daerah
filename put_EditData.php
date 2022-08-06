@@ -49,25 +49,12 @@
             if($bahasa == 'duri'){
 
                 // pengecekan parameter bahasa duri dan bahasa indonesia
-                if(isset($_PUT['kata']) AND isset($_PUT['indo'])){
+                if(isset($_PUT['kata']) AND isset($_PUT['indo']) AND isset($_PUT['id_kata'])){
 
                     // tangkap parameter NIM
                     $kata = $_PUT['kata'];
                     $indo = $_PUT['indo'];
                     $id_kata = $_PUT['id_kata'];
-            
-                    // koneksi database
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "api_kamus_daerah";
-            
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-            
-                    // Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
             
                     // Membuat query
                     $sql = "UPDATE kamus_duri SET duri='$kata',
@@ -99,25 +86,12 @@
             }elseif($bahasa == 'bugis'){
 
                 // pengecekan parameter bahasa duri dan bahasa indonesia
-                if(isset($_PUT['kata']) AND isset($_PUT['indo'])){
+                if(isset($_PUT['kata']) AND isset($_PUT['indo']) AND isset($_PUT['id_kata'])){
 
                     // tangkap parameter NIM
                     $kata = $_PUT['kata'];
                     $indo = $_PUT['indo'];
                     $id_kata = $_PUT['id_kata'];
-            
-                    // koneksi database
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "api_kamus_daerah";
-            
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-            
-                    // Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
             
                     // Membuat query
                     $sql = "UPDATE kamus_bugis SET bugis='$kata',
